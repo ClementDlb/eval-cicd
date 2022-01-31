@@ -25,7 +25,10 @@ pipeline {
   }
 
   post {
-    always{
+    success {
+        archiveArtifacts 'target/*.jar'
+    }
+    always {
         junit '**/target/surefire-reports/TEST-*.xml'
     }
   }
