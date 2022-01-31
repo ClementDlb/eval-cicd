@@ -22,7 +22,7 @@ pipeline {
 
     stage("publish"){
       steps {
-        nexusArtifactUploader artifacts: [[artifactId: 'SimpleAstronomyLib', classifier: '', file: 'target/SimpleAstronomyLib-0.3.0.jar', type: 'jar']], credentialsId: 'nexus3', groupId: 'com.bradsbrain', nexusUrl: 'localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: '/repository/eval-cicd/', version: '0.3.0'
+        nexusArtifactUploader artifacts: [[artifactId: 'SimpleAstronomyLib', classifier: '', file: 'target/SimpleAstronomyLib-0.3.0.jar', type: 'jar']], credentialsId: 'nexus3', groupId: 'com.bradsbrain', nexusUrl: 'localhost:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'eval-cicd', version: '0.3.0'
       }
     }
   }
