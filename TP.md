@@ -1,3 +1,8 @@
+Mathieu BOUCHER
+Clément DELBARRE
+Noé MATTIELLIO
+Grégoire DUJARDIN
+
 ### Config Jenkins
 
 Le projet a été défini comme "pipeline" sur Jenkins en tant que "pipeline script from SCM" avec comme target le repo Github et comme script le Jenkinsfile présent.
