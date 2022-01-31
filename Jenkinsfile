@@ -12,7 +12,7 @@ pipeline {
     stage("test"){
 
       steps {
-        echo 'testing...'
+        junit '**/target/surefire-reports/TEST-*.xml'
       }
     }
 
@@ -21,12 +21,6 @@ pipeline {
       steps {
         echo 'Deploying...'
       }
-    }
-  }
-
-  post {
-    success {
-        junit '**/target/surefire-reports/TEST-*.xml'
     }
   }
 }
